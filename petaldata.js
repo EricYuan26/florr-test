@@ -19,6 +19,18 @@ let petalData = [
     {
         type: 1,
         rarity: 5
+    },
+    {
+        type: 1,
+        rarity: 6
+    },
+    {
+        type: 1,
+        rarity: 7
+    },
+    {
+        type: 1,
+        rarity: 8
     }
 ];
 let petalLive = [];
@@ -27,14 +39,12 @@ let increment;
 function calculatePetals() {
     ctx.clearRect(-0.5*c.width, 0.5*c.height, c.width, -c.height);
     if (petalAngle <= 2*Math.PI) {
-        petalAngle = petalAngle + rotSpeed/100;
+        petalAngle = petalAngle + rotSpeed/1000;
     } else {
         petalAngle = 0;
     }
     setupLivePetalList();
-    increment = 2*Math.PI/petalLive.length;/* 
-    console.log(petalAngle);
-    console.log(petalLive); */
+    increment = (2*Math.PI)/petalLive.length;
     //the delete line is in game.js
 }
 
@@ -47,11 +57,11 @@ function lookupPetal(petalType, petalRarity) {
     return null; // If no match found
 }
 function setupLivePetalList() {
+    let rec = 0;
     for (let i=0; i< petalData.length; i++) {
         let petal = lookupPetal(petalData[i].type, petalData[i].rarity);
         for (let j=0; j<petal.amt; j++) {
-            tempAngle = increment * (i+j) + petalAngle;
-            //console.log(tempAngle);
+            tempAngle = increment * (rec) + petalAngle;
             petalLive.push(
                 {
                     angle: tempAngle, 
@@ -61,6 +71,14 @@ function setupLivePetalList() {
                     hb: petal.hb
                 }
             );
+            rec++;
         }
     }
+}
+function getNumPetals() {
+    let sum = 0;
+    for (let i = 0; i < petalLive.length; i++) {
+        sum += petalLive[i].amt;
+    }
+    return sum;
 }
