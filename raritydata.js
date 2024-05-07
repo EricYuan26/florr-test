@@ -1,0 +1,58 @@
+rarityData = [
+    {
+        type: 1,
+        rarity: 1,
+        amt: 1,
+        distMult: 100,
+        hb: 10,
+    },
+    {
+        type: 1,
+        rarity: 2,
+        amt: 2,
+        distMult: 100,
+        hb: 10,
+    },
+    {
+        type: 1,
+        rarity: 3,
+        amt: 3,
+        distMult: 100,
+        hb: 10,
+    },
+    {
+        type: 1,
+        rarity: 4,
+        amt: 4,
+        distMult: 100,
+        hb: 10,
+    },
+    {
+        type: 1,
+        rarity: 5,
+        amt: 5,
+        distMult: 100,
+        hb: 10,
+    },
+    {
+        type: 1,
+        rarity: 6,
+        amt: 10,
+        distMult: 100,
+        hb: 10,
+    },
+    {
+        type: 1,
+        rarity: 7,
+        amt: 12,
+        distMult: 100,
+        hb: 10,
+    },
+    {
+        type: 1,
+        rarity: 8,
+        amt: 20,
+        distMult: 100,
+        hb: 10,
+    },
+];
