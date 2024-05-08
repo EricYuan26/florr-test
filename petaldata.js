@@ -6,31 +6,19 @@ let petalData = [
     },
     {
         type: 1,
-        rarity: 2
+        rarity: 1
     },
     {
         type: 1,
-        rarity: 3
+        rarity: 1
     },
     {
         type: 1,
-        rarity: 4
+        rarity: 1
     },
     {
         type: 1,
-        rarity: 5
-    },
-    {
-        type: 1,
-        rarity: 6
-    },
-    {
-        type: 1,
-        rarity: 7
-    },
-    {
-        type: 1,
-        rarity: 8
+        rarity: 1
     }
 ];
 let petalLive = [];
@@ -45,6 +33,7 @@ function calculatePetals() {
     }
     setupLivePetalList();
     increment = (2*Math.PI)/petalLive.length;
+    regulatePetalDist();
     //the delete line is in game.js
 }
 
@@ -66,8 +55,8 @@ function setupLivePetalList() {
                 {
                     angle: tempAngle, 
                     distMult: petal.distMult, 
-                    x: petal.distMult * Math.cos(tempAngle), 
-                    y: petal.distMult * Math.sin(tempAngle),
+                    x: (petal.distMult + petalDistance) * Math.cos(tempAngle), 
+                    y: (petal.distMult + petalDistance) * Math.sin(tempAngle),
                     hb: petal.hb
                 }
             );
