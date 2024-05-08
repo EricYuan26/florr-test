@@ -13,12 +13,12 @@ let petalData = [
         rarity: 1
     },
     {
-        type: 1,
-        rarity: 1
+        type: 2,
+        rarity: 5  
     },
     {
-        type: 1,
-        rarity: 1
+        type: 2,
+        rarity: 8
     }
 ];
 let petalLive = [];

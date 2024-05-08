@@ -42,5 +42,4 @@ function regulatePetalDist() {
             }
         }
     }
-    console.log(expand);
 }
