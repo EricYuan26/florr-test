@@ -5,6 +5,8 @@ function tick() {
     drawPetals();
     petalLive = [];
     drawFlower();
+    renderMobs();
+    updateMobs();
     setTimeout(tick, 0);
 }
 //d
