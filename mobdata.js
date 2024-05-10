@@ -11,14 +11,14 @@ var mobData = [
 ];
 spawnMob();
 function spawnMob() {
-    let toSpawn = 2;
+    let toSpawn = 1;
     if (toSpawn == 1) {
         mobData.push(
             {
                 type: 1, //rock
                 rarity: 1,
-                x: 10,
-                y: Math.random() * 35,
+                x: 60,
+                y: 0,
                 hp: 1000
             }
         );
@@ -34,6 +34,5 @@ function spawnMob() {
             }
         );
     }
-    console.log(mobData);
-    setTimeout(spawnMob, 3000);
+    setTimeout(spawnMob, 100000);
 }

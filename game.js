@@ -3,10 +3,11 @@ tick();
 function tick() {
     calculatePetals();
     drawPetals();
-    petalLive = [];
     drawFlower();
     renderMobs();
     updateMobs();
+    checkForCollisions();
+    petalLive = [];
     setTimeout(tick, 0);
 }
 //d
