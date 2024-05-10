@@ -8,20 +8,23 @@ function updateMobs() {
             null;
         }
         if (mobData[i].type == 2) {
-            mobData[i].x += 1;
+            mobData[i].x += Math.random()-0.5;
         }
     }
     for (let j=0; j<mobsToDelete.length; j++) {
         mobData.splice(mobsToDelete[j], 1);
     }
-    console.log(mobData);
+    //console.log(mobData);
     mobsToDelete = [];
 }
 function checkForCollisions() {
     for (let i=0; i<mobData.length; i++) {
         for (let j=0; j<petalLive.length; j++) {
             if (Math.sqrt((mobData[i].x - petalLive[j].x)**2 + (mobData[i].y - petalLive[j].y)**2) <= (25 /* mob hb radius */+ petalLive[j].hb)) {
-                mobData[i].hp = mobData[i].hp - petalLive[j].damage;
+                mobData[i].hp -=petalLive[j].damage;
+                //console.log(mobData[i]);
+            } else {
+                //console.log("nb not touching");
             }
         }
     }

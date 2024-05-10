@@ -22,10 +22,10 @@ let petalData = [
     }
 ];
 let petalLive = [];
+let petalHealth = [];
 //-----------------------------------------------------------------------------------------------------------------------------------------
 let increment;
 function calculatePetals() {
-    ctx.clearRect(-0.5*c.width, 0.5*c.height, c.width, -c.height);
     if (petalAngle <= 2*Math.PI) {
         petalAngle = petalAngle + rotSpeed/1000;
     } else {
@@ -57,7 +57,9 @@ function setupLivePetalList() {
                     distMult: petal.distMult, 
                     x: (petal.distMult + petalDistance) * Math.cos(tempAngle), 
                     y: (petal.distMult + petalDistance) * Math.sin(tempAngle),
-                    hb: petal.hb
+                    hb: petal.hb,
+                    health: petal.health,
+                    damage: petal.damage
                 }
             );
             rec++;

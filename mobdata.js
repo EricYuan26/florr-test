@@ -11,7 +11,7 @@ var mobData = [
 ];
 spawnMob();
 function spawnMob() {
-    let toSpawn = 1;
+    let toSpawn = 2;
     if (toSpawn == 1) {
         mobData.push(
             {
@@ -23,16 +23,16 @@ function spawnMob() {
             }
         );
     }
-    if (toSpawn == 2) {
+    if (toSpawn == 2) { 
         mobData.push(
             {
                 type: 2, //ladybug
                 rarity: 1,
                 x: 10,
-                y: Math.random() * 35,
-                hp: 1000
+                y: 85,
+                hp: 100
             }
         );
     }
-    setTimeout(spawnMob, 100000);
+    setTimeout(spawnMob, 1000);
 }
