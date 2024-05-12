@@ -20,7 +20,7 @@ function updateMobs() {
 function checkForCollisions() {
     for (let i=0; i<mobData.length; i++) {
         for (let j=0; j<petalLive.length; j++) {
-            if (Math.sqrt((mobData[i].x - petalLive[j].x)**2 + (mobData[i].y - petalLive[j].y)**2) <= (25 /* mob hb radius */+ petalLive[j].hb)) {
+            if (Math.sqrt(((mobData[i].x - flowerX) - (petalLive[j].x - flowerX))**2 + ((mobData[i].y - flowerY) - (petalLive[j].y - flowerY))**2) <= (mobData[i].hb + petalLive[j].hb)) { // THIS FUNCTION IS VERY STRANGE WITH MOVEMENT HELP AAAAAAAAA
                 mobData[i].hp -=petalLive[j].damage;
                 //console.log(mobData[i]);
             } else {

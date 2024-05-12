@@ -19,7 +19,8 @@ function spawnMob() {
                 rarity: 1,
                 x: 60,
                 y: 0,
-                hp: 1000
+                hp: 10,
+                hb: 30,
             }
         );
     }
@@ -30,7 +31,8 @@ function spawnMob() {
                 rarity: 1,
                 x: 10,
                 y: 85,
-                hp: 100
+                hp: 10,
+                hb: 70,
             }
         );
     }

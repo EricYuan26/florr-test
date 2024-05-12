@@ -17,6 +17,41 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
+function checkWASD() {
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'w') {
+            vy = 1;
+        } else if (event.key === 'a') {
+            vx = -1;
+        } else if (event.key === 's') {
+            vy = -1;
+        } else if (event.key === 'd') {
+            vx = 1;
+        }
+    });
+    document.addEventListener('keyup', function(event) {
+        if (event.key === 'w') {
+            vy = 0;
+        } else if (event.key === 'a') {
+            vx = 0;
+        } else if (event.key === 's') {
+            vy = 0;
+        } else if (event.key === 'd') {
+            vx = 0;
+        }
+    });
+    /* document.addEventListener('keydown', function(event) {
+        if (event.key === 's') {
+            vy = -5;
+        }
+    });
+    document.addEventListener('keyup', function(event) {
+        if (event.key === 's') {
+            vy = 0;
+        }
+    }); */
+}
+
 function regulatePetalDist() {
     /* 
     Overview: 
