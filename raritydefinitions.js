@@ -59,7 +59,7 @@ rarityData = [
         rarity: 7,
         amt: 1,
         distMult: 100,
-        hb: 15 ,
+        hb: 15,
         health: 7290,
         damage: 7290
     },

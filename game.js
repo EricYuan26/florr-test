@@ -1,3 +1,12 @@
+setTimeout(function (){
+    document.getElementById("center").style.display = "none";
+    document.getElementById("ctx").style.display = "block";
+    document.body.style.backgroundColor = "white";
+    /* for (let sus=0; sus<=100; sus++) {
+        document.body.style.backgroundColor = `rgb(${2.55 * sus}, ${2.55 * sus}, ${2.55 * sus})`;
+    } */
+}, 100);
+
 tick();
 
 function tick() {

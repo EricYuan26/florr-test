@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <body>
+    <meta charset="UTF-8"></meta>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body style="background-color: rgb(0,0,0)">
+        <div id="center">
+            <b><h1 style="font-family: Ubuntu; color:white; font-size: 50px">Loading...</h1></b>
+        </div>
         <canvas id="ctx"></canvas>
     </body>
     <style>
@@ -10,6 +17,29 @@
             height: 100vh;
             cursor: default;
         } */
+        #ctx {
+            display: none;
+        }
+        /* .center {
+            top: 50%;
+            position: absolute;
+            border: 0px;
+        } */
+        #center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0px;
+            height: 0px;
+        }
+        #center h1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
     <script src="init.js"></script>
     <script src="controls.js"></script>

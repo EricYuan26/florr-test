@@ -29,8 +29,8 @@ function spawnMob() {
             {
                 type: 2, //ladybug
                 rarity: 1,
-                x: 10,
-                y: 85,
+                x: 100,
+                y: 130,
                 hp: 10,
                 hb: 70,
             }
