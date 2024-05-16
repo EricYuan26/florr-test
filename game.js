@@ -12,7 +12,7 @@ tick();
 function tick() {
     ctx.clearRect(-0.5*c.width, 0.5*c.height, c.width, -c.height);
 
-    checkWASD();
+    //checkWASD();
     updateFlowerPos();
     calculatePetals();
     drawPetals();

@@ -17,7 +17,7 @@ let petalData = [
         rarity: 7  
     },
     {
-        type: 1,
+        type: 2,
         rarity: 8
     }
 ];

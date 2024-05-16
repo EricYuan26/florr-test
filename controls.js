@@ -17,7 +17,7 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
-function checkWASD() {
+//function checkWASD() {
     document.addEventListener('keydown', function(event) {
         if (event.key === 'w') {
             vy = 1;
@@ -50,7 +50,7 @@ function checkWASD() {
             vy = 0;
         }
     }); */
-}
+//}
 
 function regulatePetalDist() {
     /* 

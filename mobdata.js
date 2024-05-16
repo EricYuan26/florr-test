@@ -11,13 +11,13 @@ var mobData = [
 ];
 spawnMob();
 function spawnMob() {
-    let toSpawn = 2;
+    let toSpawn = 1;
     if (toSpawn == 1) {
         mobData.push(
             {
                 type: 1, //rock
                 rarity: 1,
-                x: 60,
+                x: 0,
                 y: 0,
                 hp: 10,
                 hb: 30,
