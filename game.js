@@ -8,7 +8,6 @@ setTimeout(function (){
 }, 100);
 
 tick();
-
 function tick() {
     ctx.clearRect(-0.5*c.width, 0.5*c.height, c.width, -c.height);
 
@@ -23,6 +22,11 @@ function tick() {
 
     
     petalLive = [];
-    setTimeout(tick, 0);
+    if (disconnected == 0) {
+        setTimeout(tick, 0);
+    } else {
+        document.getElementById("disconnect").style.display = "block";
+        document.body.style.backgroundColor = "black";
+    }
 }
 //d
